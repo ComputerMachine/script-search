@@ -1,0 +1,197 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/docs/4.1/assets/img/favicons/favicon.ico">
+
+    <title>Star Trek Script Search - Search through Star Trek Transcripts</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.1/examples/checkout/">
+
+    <!-- Bootstrap core CSS -->
+    <link href="static/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <style>
+		.container {
+  			max-width: 960px;
+		}
+		.lh-condensed { line-height: 1.25; }
+	</style>
+  </head>
+
+  <body class="bg-light">
+
+    <div class="container">
+      <div class="py-5 text-center">
+        <img class="d-block mx-auto mb-4" src="https://cdn.worldvectorlogo.com/logos/star-trek-command.svg" alt="" width="72" height="72">
+        <h2>Star Trek Script Search</h2>
+        <p class="lead">This search tool looks for your entered words in the transcripts of all Star Trek episodes and movies on Chakoteya.net</p>
+      </div>
+<!--
+      <div class="row">
+        <div class="col-md-4 order-md-2 mb-4">
+          <h4 class="d-flex justify-content-between align-items-center mb-3">
+            <span class="text-muted">Previous searches</span>
+            <span class="badge badge-secondary badge-pill">3</span>
+          </h4>
+          <ul class="list-group mb-3">
+            <li class="list-group-item d-flex justify-content-between lh-condensed">
+              <div>
+                <h6 class="my-0">Make it so</h6>
+                <small class="text-muted">Star Trek TNG: Season 02 Episode 05</small>
+              </div>
+            </li>
+            <li class="list-group-item d-flex justify-content-between lh-condensed">
+              <div>
+                <h6 class="my-0">Second product</h6>
+                <small class="text-muted">Brief description</small>
+              </div>
+              <span class="text-muted">$8</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between lh-condensed">
+              <div>
+                <h6 class="my-0">Third item</h6>
+                <small class="text-muted">Brief description</small>
+              </div>
+              <span class="text-muted">$5</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between bg-light">
+              <div class="text-success">
+                <h6 class="my-0">Promo code</h6>
+                <small>EXAMPLECODE</small>
+              </div>
+              <span class="text-success">-$5</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between">
+              <span>Total (USD)</span>
+              <strong>$20</strong>
+            </li>
+          </ul>
+
+          <form class="card p-2">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Promo code">
+              <div class="input-group-append">
+                <button type="submit" class="btn btn-secondary">Redeem</button>
+              </div>
+            </div>
+          </form>
+        </div>-->
+		
+        <div class="col-md-8 order-md-1">
+          <form class="needs-validation" novalidate>
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="wordOrPhrase">Word or phrase</label>
+                <input type="text" class="form-control" id="wordOrPhrase" placeholder="" value="" required>
+                <div class="invalid-feedback">
+                  Valid word or phrase required.
+                </div>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="spokenBy">Spoken by whom (optional)</label>
+                <input type="text" class="form-control" id="spokenBy" placeholder="" value="">
+              </div>
+            </div>
+
+            <hr class="mb-4">
+
+			<h5 class="mb-4">In which series was this word or phrase spoken?</h5>
+			
+			<div class="form-check">
+				<input class="form-check-input custom-control-input" type="checkbox" value="" id="tos">
+				<label class="form-check-label custom-control-label" for="tos">
+					The Original Series
+				</label>
+			</div>
+
+			<div class="form-check">
+				<input class="form-check-input custom-control-input" type="checkbox" value="" id="tng">
+				<label class="form-check-label custom-control-label" for="tng">
+					The Next Generation
+				</label>
+			</div>
+
+			<div class="form-check">
+				<input class="form-check-input custom-control-input" type="checkbox" value="" id="voy">
+				<label class="form-check-label custom-control-label" for="voy">
+					Voyager
+				</label>
+			</div>
+
+			<div class="form-check">
+				<input class="form-check-input custom-control-input" type="checkbox" value="" id="ds9">
+				<label class="form-check-label custom-control-label" for="ds9">
+					Deep Space Nine
+				</label>
+			</div>
+
+			<div class="form-check">
+				<input class="form-check-input custom-control-input" type="checkbox" value="" id="tas">
+				<label class="form-check-label custom-control-label" for="tas">
+					The Animated Series
+				</label>
+			</div>
+
+			<div class="form-check">
+				<input class="form-check-input custom-control-input" type="checkbox" value="" id="tas" checked>
+				<label class="form-check-label custom-control-label" for="tas">
+					All series and movies
+				</label>
+			</div>
+
+            <hr class="mb-4">
+
+            <button class="btn btn-primary btn-lg btn-block" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+
+      <footer class="my-5 pt-5 text-muted text-center text-small">
+		<p class="mb-1">Special thanks to chakoteya.net for all Star Trek transcripts.</p>
+        <p class="mb-1">Star Trek ® and related marks are trademarks of CBS Studios Inc. Copyright © 1966, Present. The Star Trek web pages on this site are for educational and entertainment purposes only. All other copyrights property of their respective holders.</p>
+        <ul class="list-inline">
+          <li class="list-inline-item"><a href="#">Privacy</a></li>
+          <li class="list-inline-item"><a href="#">Terms</a></li>
+          <li class="list-inline-item"><a href="#">Support</a></li>
+        </ul>
+      </footer>
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="../../assets/js/vendor/popper.min.js"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <script src="../../assets/js/vendor/holder.min.js"></script>
+    <script>
+      // Example starter JavaScript for disabling form submissions if there are invalid fields
+      (function() {
+        'use strict';
+
+        window.addEventListener('load', function() {
+          // Fetch all the forms we want to apply custom Bootstrap validation styles to
+          var forms = document.getElementsByClassName('needs-validation');
+
+          // Loop over them and prevent submission
+          var validation = Array.prototype.filter.call(forms, function(form) {
+            form.addEventListener('submit', function(event) {
+              if (form.checkValidity() === false) {
+                event.preventDefault();
+                event.stopPropagation();
+              }
+              form.classList.add('was-validated');
+            }, false);
+          });
+        }, false);
+      })();
+    </script>
+  </body>
+</html>
