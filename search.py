@@ -13,12 +13,12 @@ def search_for_match(text=None, author=None, series=[None]):
     data_files = []
     matched_lines = []
     folders = {
-        "tng": "json_transcripts\\tng\\",
-        "ds9": "json_transcripts\\ds9\\",
-        "voy": "json_transcripts\\voy\\",
-        "tos": "json_transcripts\\tos\\",
-        "tas": "json_transcripts\\tas\\",
-        "ent": "json_transcripts\\ent\\"
+        "tng": "json_transcripts/tng/",
+        "ds9": "json_transcripts/ds9/",
+        "voy": "json_transcripts/voy/",
+        "tos": "json_transcripts/tos/",
+        "tas": "json_transcripts/tas/",
+        "ent": "json_transcripts/ent/"
     }
     for s in series:
         if folders.get(s) is None:
@@ -63,7 +63,7 @@ def search_for_match(text=None, author=None, series=[None]):
 
 if __name__ == "__main__":
     search = input("Enter the keyword to search for > ")
-    series = "tos"
+    series = input("series? > ")
     author = None
     matched_lines = search_for_match(search, author, series)
 
