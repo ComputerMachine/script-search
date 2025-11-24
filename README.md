@@ -90,5 +90,6 @@ This tool was created as a modern, local, and scriptable replacement for scripts
 ## 📚 License & Credits
 
 - **License** See the LICENSE file for full details.
-- ** Transcript Source:** chakoteya.net
+- **Transcript Source:** chakoteya.net
 - **Author:** ComputerMachine
+
