@@ -1,23 +1,94 @@
 # Star Trek Script Search
-Search for any word or phrase spoken in Star Trek: TNG, DS9, Voyager, Enterprise, TOS. A wide variety of filters are also available.
 
-A tool created to replace the almighty star trek script search previously at scriptsearch.dxdy.name
+A command-line tool to search through Star Trek episode transcripts (TOS, TNG, DS9, Voyager, Enterprise) for any word or phrase -- with flexible filtering and fast local lookup.
 
-# How to use
-You should already have the formatted transcript files, if not:
+## 🚀 Features
 
-    pip install -r requirements.txt    
-    python download_transcripts.py
+- Search lines from all major Star Trek series --
+\n- Supports word and phrase search --
+\n- Filter by series, season, episode, character --
+- Automated transcript downloading --
+- Fast local searching using JSON files 
 
-and it will attempt to fetch the raw transcripts from chakoteya.net
+## 📦 Getting Started
 
-Next, run `parse_episodes.py` to convert them into json files.
+**Prerequisites**
 
-Execute `search.py` and search for the word or phrase you were thinking of!
+- Python 3.x
 
-# Bugs
-* When downloading transcripts, some episodes for two parters are in one file, and for the 2nd part just uses a html redirect to an html ID (ex: 
-`Transcript file already exists for /voy/: 525.htm ... Skipping
-Downloading voy transcript from http://www.chakoteya.net/Voyager/525.htm#To%20Be%20Continued..` )
-* When searching for an phrase or word, it may come back with an incorrect episode number. Two part episodes are sometimes contained in a single file, therefore if the word or phrase appears anywhere in that file, it will give the same episode number. (ex: Picard tells Q to 'Get off my ship' in Encounter at Farpoint, which is stored as episode 1, but because it is a two parter, it is technically episode 2.)
-* line 88 of `get_episodes_and_parse.py` will get every line except for the last one, obviously the goal is to be able to search every single word spoken.
+**Installation**
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/ComputerMachine/script-search.git
+cd script-search
+```
+
+
+2. Install requirements:
+
+```bash
+pip install -r requirements.txt
+```
+
+**Optional**
+
+a. If you need to redownload the raw transcripts:
+
+```bash
+python download_transcripts.py
+```
+
+
+b. Parse transcripts into JSON:
+
+```bash
+python parse_episodes.py
+```
+
+## 🔍 Usage
+
+Run the search tool:
+
+```bash
+python search.py
+```
+
+You'll be prompted to enter a word or phrase.
+
+Optional filters include:
+- Series (TNG, DSY, VOY, etc.)
+- Season
+- Episode
+- Character
+
+Example input:
+
+live long and prosper
+
+## ⚠️ Known Issues 
+
+- Some two-part episodes are merged into a single transcript file --
+- Episode numbers may appear incorrect for multi-part episodes
+- The parser may skip the final line of certain transcripts
+- It's been awhile since I've touched this project, just scan it for efficiency and make sure that the JSON is all in one file, no point in it being in multiple
+
+## 💡 Why This Project?
+
+This tool was created as a modern, local, and scriptable replacement for scriptsearch.dxdy.name, enabling fast offline full-text searching of Star Trek transcripts.
+
+## 📙 Future Ideas
+
+- Web-based search UI 
+- Use ML or AI
+- Support for newer series (Discovery, Picard, SNW)
+- Fuzzy / approximate search
+- Statistics (character usage, phrase frequency)
+- Export search results to CSV or Markdown 
+
+## 📚 License & Credits
+
+- **License** See the LICENSE file for full details.
+- ** Transcript Source:** chakoteya.net
+- **Author:** ComputerMachine
